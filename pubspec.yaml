@@ -23,6 +23,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   go_router: ^17.0.0
+  flutter_launcher_icons: ^0.14.4
 
 dev_dependencies:
   flutter_test:
