@@ -1,5 +1,5 @@
+import 'package:example_template/common/app_router.dart';
 import 'package:example_template/gen/i18n/locale.dart';
-import 'package:example_template/pages/splash/splash_page.dart';
 import 'package:example_template/providers/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -14,27 +14,15 @@ class MyApp extends ConsumerWidget {
 
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context, ref) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final theme = ref.watch(themeProvider);
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Example Template',
-      navigatorObservers: [_CustomNavigatorObserver()],
       locale: TranslationProvider.of(context).flutterLocale,
       supportedLocales: AppLocaleUtils.supportedLocales,
       localizationsDelegates: [...GlobalMaterialLocalizations.delegates],
       theme: theme,
-      home: const SplashPage(),
+      routerConfig: appRouter,
     );
-  }
-}
-
-class _CustomNavigatorObserver extends NavigatorObserver {
-  @override
-  void didPush(Route<dynamic> route, Route<dynamic>? previousRoute) {
-    super.didPush(route, previousRoute);
-    print('Navigated to ${route.settings.name}');
-    // FirebaseAnalytics.instance.logScreenView(
-    //   screenName: route.settings.name ?? 'unknown',
-    // );
   }
 }

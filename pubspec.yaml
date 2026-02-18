@@ -1,6 +1,6 @@
 name: example_template
 description: "A new Flutter project."
-publish_to: "none" # Remove this line if you wish to publish to pub.dev
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
@@ -12,6 +12,8 @@ dependencies:
 
   cupertino_icons: ^1.0.8
 
+  shared_preferences: ^2.5.3
+
   riverpod: ^3.2.1
   provider: ^6.1.5+1
   flutter_riverpod: ^3.2.1
@@ -20,6 +22,7 @@ dependencies:
   slang_flutter: ^4.8.0
   flutter_localizations:
     sdk: flutter
+  go_router: ^17.0.0
 
 dev_dependencies:
   flutter_test:
