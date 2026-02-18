@@ -27,6 +27,7 @@ class _Onboarding implements _Action<bool> {
   }
 }
 
+//TODO: In startup, it will create all [_Action] instance, we must handle it later
 class SharedPrefHelper {
   final onboarding = _Onboarding();
 }
