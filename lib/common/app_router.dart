@@ -2,7 +2,9 @@ import 'dart:developer';
 
 import 'package:example_template/pages/home/home_page.dart';
 import 'package:example_template/pages/onboarding/onboarding_page.dart';
+import 'package:example_template/pages/policy/policy_page.dart';
 import 'package:example_template/pages/splash/splash_page.dart';
+import 'package:example_template/pages/terms/terms_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -12,6 +14,8 @@ class AppRoutePaths {
   static const splash = '/';
   static const onboarding = '/onboarding';
   static const home = '/home';
+  static const policy = '/policy';
+  static const terms = '/terms';
 }
 
 final GoRouter appRouter = GoRouter(
@@ -29,6 +33,14 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
       path: AppRoutePaths.home,
       builder: (context, state) => const HomePage(),
+    ),
+    GoRoute(
+      path: AppRoutePaths.policy,
+      builder: (context, state) => const PolicyPage(),
+    ),
+    GoRoute(
+      path: AppRoutePaths.terms,
+      builder: (context, state) => const TermsOfServicePage(),
     ),
   ],
 );
