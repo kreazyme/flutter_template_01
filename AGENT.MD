@@ -88,3 +88,9 @@ class User {
 - **Build Runner:** `dart run build_runner build --delete-conflicting-outputs`
 - **Test:** `flutter test .`
 - **Analyze:** `flutter analyze .`
+
+## Slang Localization Rule
+
+- NEVER edit generated files under `lib/gen/i18n/` manually.
+- Only add or update translation keys in `assets/i18n/*.json`.
+- After locale changes, regenerate files with: `fvm dart run slang`.

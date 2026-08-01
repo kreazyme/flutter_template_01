@@ -43,7 +43,8 @@ When AI tools update this template, follow these repo-specific rules:
 
 3. **Handle localization through Slang**
    - Add new translation keys in `assets/i18n/*.json`.
-   - Regenerate `lib/gen/i18n/locale.dart` and locale files after updates.
+   - Never edit generated files in `lib/gen/i18n/` directly.
+   - Regenerate `lib/gen/i18n/locale.dart` and locale files with `fvm dart run slang`.
 
 4. **Use existing state patterns**
    - Reuse Riverpod/Provider patterns already in the template.
