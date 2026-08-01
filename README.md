@@ -2,6 +2,8 @@
 
 A starter Flutter application template with routing, localization, theming, onboarding state, and legal-content pages.
 
+> AI contributor rules are defined in `/home/runner/work/flutter_template_01/flutter_template_01/AGENT.MD`.
+
 ## Technology Stack
 
 - **Flutter** `3.41.1` (managed via **FVM**)
