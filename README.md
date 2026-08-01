@@ -8,7 +8,7 @@ A starter Flutter application template with routing, localization, theming, onbo
 
 - **Flutter** `3.41.1` (managed via **FVM**)
 - **Dart** `^3.8.1`
-- **State Management**: `flutter_riverpod`, `riverpod`, `provider`
+- **State Management**: `flutter_riverpod`, `riverpod`
 - **Routing**: `go_router`
 - **Localization (i18n)**: `slang`, `slang_flutter` with JSON translations in `assets/i18n`
 - **Local Storage**: `shared_preferences`
